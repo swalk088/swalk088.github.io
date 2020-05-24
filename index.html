@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8"> #
-    <link rel="stylesheet" href="assets\colorlib-regform-12\css\style.css">
+    <link rel="stylesheet" href="assets\css\style.css">
 </head>
 
 <body>
@@ -18,13 +18,14 @@
             <div class="form-group-1">
                 <p>1. What are your initial impressions of this website based on its cover page below. </p>
                 <a href="https://canadianultimate.com/">
-                    <img src="assets\colorlib-regform-12\images\ultimate_canada.jpg">
+                    <img src="assets\images\ultimate_canada.png">
                 </a>
                 <br>
                 <label class="questions" for="initial_impressions">(Please Answer Question 1. here.)</label>
+                <br>
                 <input id="initial_impressions" type="text" placeholder="I think that..." required>
             </div>
-            <div>
+            <div class="form-group-1">
                 <p>2. From the main page, which button would you click on to find infomation on the National Frisbee teams?</p>
                 <div>
                     <input id="ultimate_canada" type="radio">
@@ -47,7 +48,7 @@
                     <label class="label-agree-term" for="pay_fees">Pay Fees</label>
                 </div>
             </div>
-            <div>
+            <div class="form-group-1">
                 <p>3. Would you be comfortable saying that you would be able to create an account for this website?</p>
                 <select>
                     <option value="yes">Yes</option>
@@ -55,22 +56,11 @@
                     <option value="maybe">Maybe</option>
                 </select>
             </div>
+
             <div>
-                <p>4. This website looks visually appearing</p>
-                <div>
-
+                <div class="form-group-1">
+                    <p>4. This website looks visually appearing</p>
                 </div>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-            </div>
-            <div>
                 <label class="label-agree-term" for="nva">Not very Appealing</label>
                 <input id="nva" type="checkbox">
                 <label class="label-agree-term" for="na">Not Awful</label>
@@ -79,7 +69,7 @@
                 <input id="al" type="checkbox">
                 <label class="label-agree-term" for="va">Very appealing</label>
                 <input id="va" type="checkbox">
-                <label class="label-agree-term" for="no"></label>
+                <label class="label-agree-term" for="no">No Opinion</label>
                 <input id="no" type="checkbox">
             </div>
             <input type="submit " value="Submit ">
