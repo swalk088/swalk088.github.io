@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="assets/colorlib-regform-12/css/style.css">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets\colorlib-regform-12\css\style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
 
 <body>
     <title>QUESTIONNAIRE_SEG3125_LAB_1</title>
     <h1>Questionnaire for SEG3125</h1>
     <div class="container">
-        <form action="index.php" class="appointment-form">
+        <form action="index.php" class="questionnaire-form">
             <h2>Questionnaire</h2>
+            <p class="">This is a questionnaire about the UI of the site of Ultimate Canada:
+                <a href="https://canadianultimate.com/">https://canadianultimate.com/</a>
+            </p>
+
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets\colorlib-regform-12\images\_DSC6149.jpg" alt="Los Angeles">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets\colorlib-regform-12\images\_DSC6150.jpg" alt="Chicago">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets\colorlib-regform-12\images\_DSC6153.jpg" alt="New York">
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+
+            </div>
+
+
             <div class="form-group-1">
                 <input type="text" placeholder=" " required>
             </div>
