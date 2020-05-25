@@ -199,7 +199,14 @@ body {
     -o-background-size: cover;
     -ms-background-size: cover;
     background-position: center center;
-    font-weight: 400;
+    font-family: 'Roboto Slab';
+    margin: 0px;
+}
+
+footer {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #fff;
     font-family: 'Roboto Slab';
     margin: 0px;
 }
