@@ -5,6 +5,7 @@
     <title>QUESTIONNAIRE_SEG3125_LAB_1</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'> -->
 </head>
 
 <body>
@@ -15,17 +16,29 @@
                     <a href="https://canadianultimate.com/">https://canadianultimate.com/</a>
                 </p>
                 <div class="form-group-1">
-                    <p>1. What are your initial impressions of this website based on its cover page below. </p>
+                    <p>1. Can you input your first and last names in the boxes below</p>
+                    <div>
+                        <label for="">First Name:</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Last Name:</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="form-group-1">
+                    <p>2. What are your initial impressions of this website based on its cover page below. </p>
                     <a href="https://canadianultimate.com/">
                         <img src="images/ultimate_canada.PNG" alt="Ultimate Canada Website">
                     </a>
                     <br>
-                    <label class="questions" for="initial_impressions">(Please Answer Question 1. here.)</label>
+                    <label class="questions" for="initial_impressions">(Please answer here.)</label>
                     <br>
-                    <input id="initial_impressions" type="text" placeholder="I think ..." required>
+                    <textarea rows="4" cols="50" id="initial_impressions"></textarea>
+
                 </div>
                 <div class="form-group-1">
-                    <p>2. From the main page, which button would you click on to find infomation on the National Frisbee teams?</p>
+                    <p>3. From the main page, which button would you click on to find infomation on the National Frisbee teams?</p>
                     <div>
                         <input id="ultimate_canada" type="radio">
                         <label class="label-agree-term" for="ultimate_canada">Ultimate Canada</label>
@@ -48,7 +61,7 @@
                     </div>
                 </div>
                 <div class="form-group-1">
-                    <p>3. Would you be comfortable saying that you would be able to create an account for this website?</p>
+                    <p>4. Would you be comfortable saying that you would be able to create an account for this website?</p>
                     <select>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -56,33 +69,67 @@
                 </select>
                 </div>
 
-                <div>
-                    <div class="form-group-1">
-                        <p>4. This website looks visually appearing</p>
-                    </div>
-
+                <div class="form-group-1">
+                    <p>5. This website looks visually appealing</p>
                     <div>
-                        <ul class="likert">
-                            <li class="likert"> Not Guilty <input id="radGuiltyStart" type="radio" name="Guilty" value="1" />
-                                <li class="likert"><input type="radio" name="Guilty" value="2" />
-                                    <li class="likert"><input type="radio" name="Guilty" value="3" />
-                                        <li class="likert"><input type="radio" name="Guilty" value="4" />
-                                            <li class="likert"><input id="radGuiltyEnd" type="radio" name="Guilty" value="5" /> Very Guilty
-                        </ul>
+                        <input id="nt" type="checkbox">
+                        <label class="label-agree-term" for="nt">Not True</label>
                     </div>
+                    <div>
+                        <input id="un" type="checkbox">
+                        <label class="label-agree-term" for="un">Unsure</label>
+                    </div>
+                    <div>
+                        <input id="no" type="checkbox">
+                        <label class="label-agree-term" for="no">No Opinion</label>
+                    </div>
+                    <div>
+                        <input id="t" type="checkbox">
+                        <label class="label-agree-term" for="t">True</label>
+                    </div>
+                    <div>
 
-                    <label class="label-agree-term" for="nva">Not very Appealing</label>
-                    <input id="nva" type="checkbox">
-                    <label class="label-agree-term" for="na">Not Awful</label>
-                    <input id="na" type="checkbox">
-                    <label class="label-agree-term" for="al">It's alright</label>
-                    <input id="al" type="checkbox">
-                    <label class="label-agree-term" for="va">Very appealing</label>
-                    <input id="va" type="checkbox">
-                    <label class="label-agree-term" for="no">No Opinion</label>
-                    <input id="no" type="checkbox">
+                        <input id="vt" type="checkbox">
+                        <label class="label-agree-term" for="vt">Very True</label>
+                    </div>
                 </div>
-                <input class="submit" type="submit">
+                <div class="form-group-1">
+                    <p>6. Using the attributes listed below, describe the appereance of this Website</p>
+                    <div>
+                        <input id="weird" type="checkbox">
+                        <label class="label-agree-term" for="weird">Weird</label>
+                    </div>
+                    <div>
+                        <input id="stylish" type="checkbox">
+                        <label class="label-agree-term" for="stylish">Stylish</label>
+                    </div>
+                    <div>
+                        <input id="use" type="checkbox">
+                        <label class="label-agree-term" for="use">Usable</label>
+                    </div>
+                    <div>
+                        <input id="layout" type="checkbox">
+                        <label class="label-agree-term" for="layout">Well thought out</label>
+                    </div>
+                    <div>
+
+                        <input id="creative" type="checkbox">
+                        <label class="label-agree-term" for="creative">Creative</label>
+                    </div>
+                    <div>
+
+                        <input id="modern" type="checkbox">
+                        <label class="label-agree-term" for="modern">Modern</label>
+                    </div>
+                </div>
+                <div class="form-group-1">
+                    <p>Any Comments or questions can be mentioned below:</p>
+                    <textarea rows="4" cols="50" id="comments"></textarea>
+                </div>
+
+                <div class="form-group-2">
+                    <input class="submit" type="submit">
+                </div>
         </form>
     </div>
 </body>
