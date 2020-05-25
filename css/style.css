@@ -219,7 +219,7 @@ footer {
 .container {
     width: 586px;
     background: #fff;
-    margin-left: 165px;
+    margin: 0 auto;
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
