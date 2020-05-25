@@ -8,12 +8,14 @@ display-flex {
 
 /* @extend list-type-ulli; */
 
+
+/* 
 list-type-ulli,
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
+} */
 
 
 /* roboto-slab-300 - latin */
@@ -190,7 +192,7 @@ body {
     font-size: 13px;
     line-height: 1.8;
     color: #fff;
-    background-image: url("/images/upi.PNG");
+    background-image: url("https://swalk088.github.io/images/upi.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     -moz-background-size: cover;

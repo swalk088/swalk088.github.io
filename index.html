@@ -2,12 +2,12 @@
 <html>
 
 <head>
+    <title>QUESTIONNAIRE_SEG3125_LAB_1</title>
     <meta charset="utf-8"> #
     <link rel="stylesheet" href="https://swalk088.github.io/css/style.css">
 </head>
 
 <body>
-    <title>QUESTIONNAIRE_SEG3125_LAB_1</title>
     <h1>Questionnaire for SEG3125</h1>
     <div class="container">
         <form action="index.php" class="questionnaire-form">
@@ -61,6 +61,17 @@
                 <div class="form-group-1">
                     <p>4. This website looks visually appearing</p>
                 </div>
+
+                <div>
+                    <ul class="likert">
+                        <li class="likert"> Not Guilty <input id="radGuiltyStart" type="radio" name="Guilty" value="1" />
+                            <li class="likert"><input type="radio" name="Guilty" value="2" />
+                                <li class="likert"><input type="radio" name="Guilty" value="3" />
+                                    <li class="likert"><input type="radio" name="Guilty" value="4" />
+                                        <li class="likert"><input id="radGuiltyEnd" type="radio" name="Guilty" value="5" /> Very Guilty
+                    </ul>
+                </div>
+
                 <label class="label-agree-term" for="nva">Not very Appealing</label>
                 <input id="nva" type="checkbox">
                 <label class="label-agree-term" for="na">Not Awful</label>
@@ -72,7 +83,7 @@
                 <label class="label-agree-term" for="no">No Opinion</label>
                 <input id="no" type="checkbox">
             </div>
-            <input type="submit " value="Submit ">
+            <input class="submit" type="submit">
         </form>
     </div>
 </body>
