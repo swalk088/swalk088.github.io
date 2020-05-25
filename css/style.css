@@ -120,11 +120,10 @@ input[type=radio] {
     -ms-appearance: radio !important;
 } */
 
-
-/* img {
+img {
     max-width: 100%;
     height: auto;
-} */
+}
 
 figure {
     margin: 0;
