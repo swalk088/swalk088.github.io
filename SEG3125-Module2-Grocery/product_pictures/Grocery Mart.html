@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)file:///C:/Users/simon/Documents/GitHub/swalk088.github.io/SEG3125-Module2-Grocery/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp-->
+    <link href="./Grocery Mart_files/style.css" rel="stylesheet" type="text/css">
+    <title>Grocery Mart</title>
+</head>
+
+<body>
+
+    <!-- Tab links, each one with an onclick event associated with it -->
+    <div class="tab">
+        <button class="tablinks" onclick="openInfo(event, &#39;Client&#39;)">Client</button>
+        <button class="tablinks active" onclick="openInfo(event, &#39;Products&#39;);populateListProductChoices(null, &#39;displayProduct&#39;)">Products</button>
+        <button class="tablinks" onclick="openInfo(event, &#39;Cart&#39;)">Cart</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="Client" class="tabcontent" style="display: none;">
+        <h3>Client Information</h3>
+        <p>Tell us a bit about you.</p>
+
+        <div class="dietSelect">
+            <div>
+                <label for="vegetarian">Vegetarian</label>
+                <input type="checkbox" id="vegetarian" value="Vegetarian" onchange="populateListProductChoices(this.id, &#39;displayProduct&#39;)">
+            </div>
+            <div>
+                <label for="glutenFree">Gluten Free</label>
+                <input type="checkbox" id="glutenFree" value="GlutenFree" onchange="populateListProductChoices(this.id, &#39;displayProduct&#39;)">
+            </div>
+            <div>
+                <label for="organic">Organic</label>
+                <input type="checkbox" id="organic" value="PreferOrganic" onchange="populateListProductChoices(this.id, &#39;displayProduct&#39;)">
+            </div>
+            <div>
+                <label for="nutAllergy">Nut Allergy</label>
+                <input type="checkbox" id="nutAllergy" value="NutAllergy" onchange="populateListProductChoices(this.id, &#39;displayProduct&#39;)">
+            </div>
+        </div>
+    </div>
+
+    <div id="Products" class="tabcontent" style="display: block;">
+        <h3>Your targeted products</h3>
+        <p>We preselected products based on your restrictions.</p>
+        Choose items to buy:
+        <div id="displayProduct"><table id="shopping_table"><tbody><tr><td></td><td>Item</td><td>Price</td><td>Quantity</td></tr><tr id="appleRow"><td><img src="./Grocery Mart_files/apple.jpg" width="100px"></td><td>apple</td><td>1.75</td><td><input id="quantityapple" type="number" min="0" value="0"></td></tr><tr id="broccoliRow"><td><img src="./Grocery Mart_files/broccoli.jpg" width="100px"></td><td>broccoli</td><td>1.99</td><td><input id="quantitybroccoli" type="number" min="0" value="0"></td></tr><tr id="breadRow"><td><img src="./Grocery Mart_files/bread.jpg" width="100px"></td><td>bread</td><td>2.35</td><td><input id="quantitybread" type="number" min="0" value="0"></td></tr><tr id="strawberryRow"><td><img src="./Grocery Mart_files/strawberry.jpg" width="100px"></td><td>strawberry</td><td>3.23</td><td><input id="quantitystrawberry" type="number" min="0" value="0"></td></tr><tr id="brownieRow"><td><img src="./Grocery Mart_files/brownie.jpg" width="100px"></td><td>brownie</td><td>4.25</td><td><input id="quantitybrownie" type="number" min="0" value="0"></td></tr><tr id="spaghettiRow"><td><img src="./Grocery Mart_files/spaghetti.jpg" width="100px"></td><td>spaghetti</td><td>5.65</td><td><input id="quantityspaghetti" type="number" min="0" value="0"></td></tr><tr id="cheeseRow"><td><img src="./Grocery Mart_files/cheese.jpg" width="100px"></td><td>cheese</td><td>9.99</td><td><input id="quantitycheese" type="number" min="0" value="0"></td></tr><tr id="salmonRow"><td><img src="./Grocery Mart_files/salmon.jpg" width="100px"></td><td>salmon</td><td>10</td><td><input id="quantitysalmon" type="number" min="0" value="0"></td></tr><tr id="steakRow"><td><img src="./Grocery Mart_files/steak.jpg" width="100px"></td><td>steak</td><td>10</td><td><input id="quantitysteak" type="number" min="0" value="0"></td></tr><tr id="eggsRow"><td><img src="./Grocery Mart_files/eggs.jpg" width="100px"></td><td>eggs</td><td>12</td><td><input id="quantityeggs" type="number" min="0" value="0"></td></tr></tbody></table></div>
+        <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected item(s) to cart.
+	</button>
+    </div>
+
+    <div id="Cart" class="tabcontent" style="display: none;">
+        <h3>Cart</h3>
+        <p>Here is your cart.</p>
+        <div id="displayCart"></div>
+    </div>
+
+    <script src="./Grocery Mart_files/groceries.js.download"></script>
+    <script src="./Grocery Mart_files/main.js.download"></script>
+
+
+
+</body></html>
