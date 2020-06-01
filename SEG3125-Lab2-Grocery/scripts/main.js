@@ -112,8 +112,6 @@ function selectedItems() {
     console.log(cart_list)
 
 
-
-
     var cart_table = document.createElement("table");
     cart_table.id = "cart_table"
     var c = document.getElementById('displayCart');
@@ -149,6 +147,7 @@ function selectedItems() {
     // add paragraph and total price
     c.appendChild(para);
     c.appendChild(cart_table)
+    c.appendChild(document.createElement("br"))
     c.appendChild(document.createTextNode("Final Price is: $" + getTotalPrice(cart_list)));
 
 }

@@ -4,7 +4,7 @@
 	    vegetarian: false,
 	    glutenFree: false,
 	    organic: false,
-	    notFree: false,
+	    nutFree: false,
 	}
 	var products = [{
 	        name: "broccoli",
@@ -12,7 +12,7 @@
 	        glutenFree: true,
 	        price: 1.99,
 	        organic: true,
-	        notFree: true,
+	        nutFree: true,
 	    },
 	    {
 	        name: "bread",
@@ -20,7 +20,7 @@
 	        glutenFree: false,
 	        price: 2.35,
 	        organic: false,
-	        notFree: true,
+	        nutFree: true,
 	    },
 	    {
 	        name: "salmon",
@@ -28,7 +28,7 @@
 	        glutenFree: true,
 	        price: 10.00,
 	        organic: true,
-	        notFree: true,
+	        nutFree: true,
 	    },
 	    {
 	        name: "steak",
@@ -36,7 +36,7 @@
 	        glutenFree: true,
 	        price: 10.00,
 	        organic: true,
-	        notFree: true,
+	        nutFree: true,
 	    },
 	    {
 	        name: "strawberry",
@@ -44,7 +44,7 @@
 	        glutenFree: true,
 	        price: 3.23,
 	        organic: true,
-	        notFree: true,
+	        nutFree: true,
 	    },
 	    {
 	        name: "apple",
@@ -52,7 +52,7 @@
 	        glutenFree: true,
 	        price: 1.75,
 	        organic: true,
-	        notFree: true,
+	        nutFree: true,
 	    },
 	    {
 	        name: "cheese",
@@ -60,7 +60,7 @@
 	        glutenFree: true,
 	        price: 9.99,
 	        organic: true,
-	        notFree: true,
+	        nutFree: true,
 	    },
 	    {
 	        name: "eggs",
@@ -68,7 +68,7 @@
 	        glutenFree: true,
 	        price: 12.00,
 	        organic: true,
-	        notFree: true,
+	        nutFree: true,
 	    },
 	    {
 	        name: "brownie",
@@ -76,15 +76,23 @@
 	        glutenFree: false,
 	        price: 4.25,
 	        organic: false,
-	        notFree: false,
+	        nutFree: false,
 	    },
 	    {
 	        name: "spaghetti",
-	        vegetarian: false,
+	        vegetarian: true,
 	        glutenFree: false,
 	        price: 5.65,
 	        organic: false,
-	        notFree: true,
+	        nutFree: true,
+	    },
+	    {
+	        name: "pepper",
+	        vegetarian: true,
+	        glutenFree: true,
+	        price: 2.65,
+	        organic: true,
+	        nutFree: true,
 	    }
 	];
 
@@ -103,14 +111,14 @@
 	        } else if ((restriction.value == "PreferOrganic")) {
 	            restrictions_list.organic = restriction.checked;
 	        } else if ((restriction.value == "NutAllergy")) {
-	            restrictions_list.notFree = restriction.checked;
+	            restrictions_list.nutFree = restriction.checked;
 	        }
 
 	    }
 	    let product_names = [];
 	    for (let i = 0; i < products.length; i += 1) {
 
-	        if ((products[i].vegetarian || !restrictions_list.vegetarian) && (products[i].glutenFree || !restrictions_list.glutenFree) && (products[i].organic || !restrictions_list.organic) && (products[i].notFree || !restrictions_list.notFree)) {
+	        if ((products[i].vegetarian || !restrictions_list.vegetarian) && (products[i].glutenFree || !restrictions_list.glutenFree) && (products[i].organic || !restrictions_list.organic) && (products[i].nutFree || !restrictions_list.nutFree)) {
 	            product_names.push(products[i])
 	        }
 	    }
