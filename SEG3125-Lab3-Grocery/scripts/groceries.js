@@ -23,7 +23,7 @@
 	        price: 2.35,
 	        organic: false,
 	        nutFree: true,
-	        category: "carbohydrate",
+	        category: "bakery",
 	    },
 	    {
 	        name: "salmon",
@@ -86,7 +86,7 @@
 	        price: 4.25,
 	        organic: false,
 	        nutFree: false,
-	        category: "carbohydrate",
+	        category: "bakery",
 	    },
 	    {
 	        name: "spaghetti",
