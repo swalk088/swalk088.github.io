@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Grocery Mart</title>
+</head>
+
+<body onload="document.getElementById('allProductsButton').click();">
+
+    <!-- Tab content -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="exitCartBtn" onclick="changeCart()">×</a>
+        <p id=empty_cart>Your Cart is empty</p>
+    </div>
+
+
+
+
+    <!-- <div class="dietSelect">
+        <div>
+            <label for="vegetarian">Vegetarian</label>
+            <input type="checkbox" id="vegetarian" value="Vegetarian" onchange="populateListProductChoices(this.id, 'displayProduct')">
+        </div>
+        <div>
+            <label for="glutenFree">Gluten Free</label>
+            <input type="checkbox" id="glutenFree" value="GlutenFree" onchange="populateListProductChoices(this.id, 'displayProduct')">
+        </div>
+        <div>
+            <label for="organic">Organic</label>
+            <input type="checkbox" id="organic" value=PreferOrganic onchange="populateListProductChoices(this.id, 'displayProduct')">
+        </div>
+        <div>
+            <label for="nutAllergy">Nut Allergy</label>
+            <input type="checkbox" id="nutAllergy" value="NutAllergy" onchange="populateListProductChoices(this.id, 'displayProduct')">
+        </div>
+    </div> -->
+
+    <div id="main" class="main">
+        <!-- Tab links, each one with an onclick event associated with it -->
+        <div class="top_bar">
+            <h1>Grocery Mart</h1>
+        </div>
+        <div class="preferenceFilterTab">
+            <h2>Preference Filter</h2>
+            <label for="vegetarianFilter">Vegetarian</label>
+            <input id="vegetarianFilter" type="checkbox" value="Vegetarian" onclick="populateListProductChoices('vegetarianFilter',null)">
+            <label for="glutenFreeFilter">Gluten Free</label>
+            <input id="glutenFreeFilter" type="checkbox" value="GlutenFree" onclick="populateListProductChoices('glutenFreeFilter',null)">
+            <label for="organicFilter">Organic</label>
+            <input id="organicFilter" type="checkbox" value="PreferOrganic" onclick="populateListProductChoices('organicFilter',null)">
+            <label for="nutFreeFilter">Nut Free</label>
+            <input id="nutFreeFilter" type="checkbox" value="NutAllergy" onclick="populateListProductChoices('nutFreeFilter',null)">
+        </div>
+
+        <br>
+
+
+        <div class="tab">
+            <button id="allProductsButton" class="tablinks" onclick="openInfo(event, 'AllProducts');populateListProductChoices(null, 'displayProducts')">All Products</button>
+            <button class="tablinks" onclick="openInfo(event, 'Vegetables');populateListProductChoices(null, 'displayVegetables')">Vegetables</button>
+            <button class="tablinks" onclick="openInfo(event, 'Fruit');populateListProductChoices(null, 'displayFruit')">Fruit</button>
+            <button class="tablinks" onclick="openInfo(event, 'MeatProducts');populateListProductChoices(null, 'displayMeatProducts')">Meat Products</button>
+            <button class="tablinks" onclick="openInfo(event, 'Seafood');populateListProductChoices(null, 'displaySeafood')">Seafood</button>
+            <button class="tablinks" onclick="openInfo(event, 'Bakery');populateListProductChoices(null, 'displayBakery')">Carbohydrates</button>
+            <button class="tablinks" onclick="openInfo(event, 'Dairy');populateListProductChoices(null, 'displayDairy')">Dairy</button>
+            <button class="tablinks" onclick="openInfo(event, 'FrozenProducts');populateListProductChoices(null, 'displayFrozenProducts')">Frozen Products</button>
+            <div class="cartTab">
+                <button onclick="changeCart()"><img src="images/cart.png" width="45px"></button>
+            </div>
+        </div>
+
+
+        <div id="AllProducts" class="tabcontent">
+            <div id="displayProducts">
+                <p>stuff</p>
+            </div>
+        </div>
+        <div id="Vegetables" class="tabcontent">
+            <div id="displayVegetables">
+                <p>stuff</p>
+            </div>
+        </div>
+        <div id="Fruit" class="tabcontent">
+            <div id="displayFruit">
+                <p>stuff</p>
+            </div>
+        </div>
+        <div id="MeatProducts" class="tabcontent">
+            <div id="displayMeatProducts">
+                <p>stuff</p>
+            </div>
+        </div>
+        <div id="Seafood" class="tabcontent">
+            <div id="displaySeafood">
+                <p>stuff</p>
+            </div>
+        </div>
+        <div id="Bakery" class="tabcontent">
+            <div id="displayBakery">
+                <p>stuff</p>
+            </div>
+        </div>
+        <div id="Dairy" class="tabcontent ">
+            <div id="displayDairy">
+                <p>stuff</p>
+            </div>
+        </div>
+        <div id="FrozenProducts" class="tabcontent">
+            <div id="displayFrozenProducts">
+                <p>stuff</p>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="scripts/groceries.js "></script>
+    <script src="scripts/main.js "></script>
+
+</body>
+<footer>Website designed by Simon Walker</footer>
+
+</html>

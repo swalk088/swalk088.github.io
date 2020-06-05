@@ -1,11 +1,12 @@
 	// Array of products, each product is an object with different fieldset
 	// A set of ingredients should be added to products		 
 	var user_preferences = {
-	    vegetarian: false,
-	    glutenFree: false,
-	    organic: false,
-	    nutFree: false,
-	}
+	        vegetarian: false,
+	        glutenFree: false,
+	        organic: false,
+	        nutFree: false,
+	    }
+	    // Categopries vegetables, meat_product, seafood_product, carbohydrates, dairy, frozen_foods, fruit,
 	var products = [{
 	        name: "broccoli",
 	        vegetarian: true,
@@ -13,7 +14,7 @@
 	        price: 1.99,
 	        organic: true,
 	        nutFree: true,
-	        category: "vegtable",
+	        category: "vegetable",
 	    },
 	    {
 	        name: "bread",
@@ -22,7 +23,7 @@
 	        price: 2.35,
 	        organic: false,
 	        nutFree: true,
-	        category: "bread_product",
+	        category: "carbohydrate",
 	    },
 	    {
 	        name: "salmon",
@@ -31,7 +32,7 @@
 	        price: 10.00,
 	        organic: true,
 	        nutFree: true,
-	        category: "meat_product",
+	        category: "seafood",
 	    },
 	    {
 	        name: "steak",
@@ -71,7 +72,7 @@
 	    },
 	    {
 	        name: "eggs",
-	        vegetarian: false,
+	        vegetarian: true,
 	        glutenFree: true,
 	        price: 12.00,
 	        organic: true,
@@ -85,7 +86,7 @@
 	        price: 4.25,
 	        organic: false,
 	        nutFree: false,
-	        category: "dessert",
+	        category: "carbohydrate",
 	    },
 	    {
 	        name: "spaghetti",
@@ -103,7 +104,7 @@
 	        price: 2.65,
 	        organic: true,
 	        nutFree: true,
-	        category: "vegtable",
+	        category: "vegetable",
 	    }
 	];
 
@@ -143,13 +144,12 @@
 	        }
 	    }
 
-
+	    console.log(user_preferences)
+	    console.log(product_names)
 	    return product_names;
 	}
 
-	function updateSelectedItemsList(item) {
 
-	}
 	// Calculate the total price of items, with received parameter being a list of products
 	function getTotalPrice(chosenProducts) {
 	    totalPrice = 0;

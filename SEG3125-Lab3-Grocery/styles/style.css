@@ -1,0 +1,166 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+
+/* Style the tab */
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    font-size: 22px;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+/* Style the buttons that are used to open the tab content */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 22px;
+}
+
+.top_bar {
+    font-size: 14;
+    font-style: normal;
+}
+
+.top_bar p {
+    font-size: 14;
+    font-style: normal;
+}
+
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.cartTab {
+    border-top: none;
+    float: right;
+    background-color: #f1f1f1;
+}
+
+.preferenceFilterTab {
+    width: 525px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    font-size: 25px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.preferenceFilterTab h2 {
+    font-size: 25px;
+    margin: auto;
+    text-align: center;
+}
+
+.preferenceFilterTab label:hover {
+    background-color: #ddd;
+    border: 2px solid #4778d9!important;
+}
+
+ul,
+#myUL {
+    list-style-type: none;
+}
+
+#myUL {
+    margin: 0;
+    padding: 0;
+}
+
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+}
+
+.sidebar p {
+    padding: 8px 8px 8px 32px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .exitCartBtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+}
+
+.exitCartBtn {
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #111;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+}
+
+.exitCartBtn:hover {
+    background-color: #444;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
