@@ -154,7 +154,7 @@
 	function getTotalPrice(chosenProducts) {
 	    totalPrice = 0;
 	    for (let i = 0; i < chosenProducts.length; i += 1) {
-	        totalPrice += parseFloat(chosenProducts[i].itemPrice);
+	        totalPrice += parseFloat(chosenProducts[i].price);
 	    }
 	    return totalPrice;
 	}

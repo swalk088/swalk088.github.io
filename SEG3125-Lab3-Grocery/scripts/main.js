@@ -25,14 +25,7 @@ function openInfo(evt, tabName) {
 
 }
 
-// function myFunction() {
-//     var x = document.getElementById("myLinks");
-//     if (x.style.display == "block") {
-//         x.style.display = "none";
-//     } else {
-//         x.style.display = "block";
-//     }
-// }
+
 
 
 function changeCart() {
@@ -148,94 +141,78 @@ function updateCart(groceryName) {
                         not_found = false;
                         item.quantity = item.quantity + parseInt(quantity.value);
                         item.price = product.price * item.quantity;
+                        refreshCart()
                     }
                 });
-
-
                 if (not_found) {
                     cart_list.push({
                         name: product.name,
                         quantity: parseInt(quantity.value),
                         price: product.price * parseFloat(quantity.value),
 
-                    })
+                    });
+                    refreshCart()
                 }
             }
         });
     }
     console.log(cart_list);
     quantity.value = 0;
+
 }
 
-// function displayCategoryItems(category)
 
+function refreshCart() {
+    var sidBar = document.getElementById("mySidebar")
+    var table = document.createElement("table");
+    sidBar.innerHTML = '<a href="javascript:void(0)" class="exitCartBtn" onclick="changeCart()">×</a>'
+    for (i = 0; i < cart_list.length; i++) {
+        // var product_pic = document.createElement("IMG");
+        // product_pic.src = "images/" + productName + ".jpg"
 
-// This function is called when the "Add selected items to cart" button in clicked
-// The purpose is to build the HTML to be displayed (a Table) 
-// We build a table to contain the list of selected items, and the total price
+        var row = table.insertRow(0)
 
-function selectedItems() {
+        var productName = cart_list[i].name;
+        row.id = productName + "Row"
+        pic_cell = row.insertCell(0)
+        pic_cell.innerHTML = "<img src='images/" + productName + ".jpg' width=50px>";
+        name_cell = row.insertCell(1);
+        name_cell.innerHTML = productName;
+        cost_cell = row.insertCell(2);
+        cost_cell.innerHTML = cart_list[i].price;
+        quantity_cell = row.insertCell(3);
+        quantity_cell.innerHTML = cart_list[i].quantity;
+        add_cart_cell = row.insertCell(4);
+        add_cart_cell.innerHTML = "<button id='remove_cart_" + productName + "' onclick='removeItem(\"" + productName + "\")'>x</button>";
 
-    var shopping_table = document.getElementById('shopping_table');
-    cart_list = []
-        //create list of dict of all items in cart from shopping_table
-    for (let i = 1; i < shopping_table.rows.length; i++) {
-        var row = shopping_table.rows[i];
-        var cells = row.cells;
-        var productName = cells[1].innerHTML;
-        //console.log(productName);
-        var quantity = document.getElementById("quantity" + productName).value;
-        //console.log(quantity);
-        if (quantity !== '0') {
-            cart_list.push({
-                name: productName,
-                quantity: quantity,
-                price: cells[2].innerHTML,
-                itemPrice: parseFloat(quantity) * parseFloat(cells[2].innerHTML)
-            })
-        }
+        // create a breakline node and add in HTML DOM
+
 
     }
-    console.log(cart_list)
-
-
-    var cart_table = document.createElement("table");
-    cart_table.id = "cart_table"
-    var c = document.getElementById('displayCart');
-    c.innerHTML = "";
-
-    // build list of selected item
+    var row = table.insertRow(0);
+    var pic = row.insertCell(0);
+    var item = row.insertCell(1);
+    item.innerHTML = "Item";
+    var price = row.insertCell(2);
+    price.innerHTML = "Price";
+    var quantity = row.insertCell(3);
+    quantity.innerHTML = "Quantity";
     var para = document.createElement("P");
     para.innerHTML = "You selected : ";
     para.appendChild(document.createElement("br"));
-    for (let i = 0; i < cart_list.length; i++) {
-        row = cart_table.insertRow(0);
-        itemPriceCell = row.insertCell(0);
-        itemPriceCell.innerHTML = cart_list[i].itemPrice;
-        priceCell = row.insertCell(0);
-        priceCell.innerHTML = cart_list[i].price;
-        quantityCell = row.insertCell(0);
-        quantityCell.innerHTML = cart_list[i].quantity;
-        nameCell = row.insertCell(0);
-        nameCell.innerHTML = cart_list[i].name;
-    }
-
-    var row = cart_table.insertRow(0)
-    var item = row.insertCell(0);
-    item.innerHTML = "Item";
-    var quantity = row.insertCell(1);
-    quantity.innerHTML = "Quantity";
-    var price = row.insertCell(2);
-    price.innerHTML = "Price";
-    var tot_price = row.insertCell(3);
-    tot_price.innerHTML = "Total Price";
-
-
-    // add paragraph and total price
-    c.appendChild(para);
-    c.appendChild(cart_table)
-    c.appendChild(document.createElement("br"))
-    c.appendChild(document.createTextNode("Final Price is: $" + getTotalPrice(cart_list)));
+    sidBar.appendChild(para);
+    sidBar.appendChild(table)
+    sidBar.appendChild(document.createElement("br"))
+    sidBar.appendChild(document.createTextNode("Final Price is: $" + getTotalPrice(cart_list)));
 
 }
-populateListProductChoices(null, 'displayProducts')
+// function displayCategoryItems(category)
+
+function removeItem(prodName) {
+    for (let i = 0; i < cart_list.length; i++) {
+        if (cart_list[i].name == prodName) {
+            cart_list.pop(i)
+        }
+    }
+    refreshCart()
+}
