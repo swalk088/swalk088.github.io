@@ -34,9 +34,9 @@ function changeCart() {
         document.getElementById("main").style.marginRight = "0";
         cart_open = false
     } else {
-        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("mySidebar").style.width = "350px";
         //console.log(document.getElementById("main"))
-        document.getElementById("main").style.marginRight = "250px";
+        document.getElementById("main").style.marginRight = "350px";
         cart_open = true
     }
 
@@ -82,43 +82,77 @@ function populateListProductChoices(slct1, slct2) {
             tabOptionArray.push(grocery)
         } else if (grocery.category == "dairy" && slct2 == "displayDairy") {
             tabOptionArray.push(grocery)
-        } else if (grocery.category == "frozen_product" && slct2 == "displayFrozenProducts") {
+        } else if (grocery.category == "cooking_products" && slct2 == "displayCookingProducts") {
+            tabOptionArray.push(grocery)
+        } else if (grocery.category == "snacks" && slct2 == "displaySnackProducts") {
+            tabOptionArray.push(grocery)
+        } else if (grocery.category == "beverage" && slct2 == "displayBeverageProducts") {
             tabOptionArray.push(grocery)
         }
     })
     if (slct2 == "displayProducts") {
         tabOptionArray = optionArray
+            // for each item in the array, create a checkbox element, each containing information such as:
+            // <input type="checkbox" name="product" value="Bread">
+            // <label for="Bread">Bread/label><br>
+        var table = document.createElement("table");
+        table.id = "shopping_table"
+
+        for (i = 0; i < tabOptionArray.length; i++) {
+            // var product_pic = document.createElement("IMG");
+            // product_pic.src = "images/" + productName + ".jpg"
+
+            var row = table.insertRow(0)
+
+            var productName = tabOptionArray[i].id;
+            row.id = productName + "Row"
+            pic_cell = row.insertCell(0)
+            pic_cell.innerHTML = "<img src='images/" + productName + ".jpg' width=100px>";
+            name_cell = row.insertCell(1);
+            name_cell.innerHTML = tabOptionArray[i].name;
+            cost_cell = row.insertCell(2);
+            cost_cell.innerHTML = tabOptionArray[i].price;
+            quantity_cell = row.insertCell(3);
+            quantity_cell.innerHTML = "<input id='quantity" + productName + "' type='number' min='0' value='0'>";
+            add_cart_cell = row.insertCell(4);
+            add_cart_cell.innerHTML = "<button id='add_cart_" + productName + "' onclick='updateCart(\"" + productName + "\",\"\")'>Add Item To Cart</button>";
+
+            // create a breakline node and add in HTML DOM
+
+
+        }
+    } else {
+        // for each item in the array, create a checkbox element, each containing information such as:
+        // <input type="checkbox" name="product" value="Bread">
+        // <label for="Bread">Bread/label><br>
+        var table = document.createElement("table");
+        table.id = "shopping_table"
+
+        for (i = 0; i < tabOptionArray.length; i++) {
+            // var product_pic = document.createElement("IMG");
+            // product_pic.src = "images/" + productName + ".jpg"
+
+            var row = table.insertRow(0)
+
+            var productName = tabOptionArray[i].id;
+            row.id = productName + "Row"
+            pic_cell = row.insertCell(0)
+            pic_cell.innerHTML = "<img src='images/" + productName + ".jpg' width=100px>";
+            name_cell = row.insertCell(1);
+            name_cell.innerHTML = tabOptionArray[i].name;
+            cost_cell = row.insertCell(2);
+            cost_cell.innerHTML = tabOptionArray[i].price;
+            quantity_cell = row.insertCell(3);
+            quantity_cell.innerHTML = "<input id='quantity" + productName + tabOptionArray[i].category + "' type='number' min='0' value='0'>";
+            add_cart_cell = row.insertCell(4);
+            add_cart_cell.innerHTML = "<button id='add_cart_" + productName + tabOptionArray[i].category + "' onclick='updateCart(\"" + productName + "\",\"" + tabOptionArray[i].category + "\")'>Add Item To Cart</button>";
+
+            // create a breakline node and add in HTML DOM
+
+
+        }
     }
 
-    // for each item in the array, create a checkbox element, each containing information such as:
-    // <input type="checkbox" name="product" value="Bread">
-    // <label for="Bread">Bread/label><br>
-    var table = document.createElement("table");
-    table.id = "shopping_table"
-
-    for (i = 0; i < tabOptionArray.length; i++) {
-        // var product_pic = document.createElement("IMG");
-        // product_pic.src = "images/" + productName + ".jpg"
-
-        var row = table.insertRow(0)
-
-        var productName = tabOptionArray[i].name;
-        row.id = productName + "Row"
-        pic_cell = row.insertCell(0)
-        pic_cell.innerHTML = "<img src='images/" + productName + ".jpg' width=100px>";
-        name_cell = row.insertCell(1);
-        name_cell.innerHTML = productName;
-        cost_cell = row.insertCell(2);
-        cost_cell.innerHTML = tabOptionArray[i].price;
-        quantity_cell = row.insertCell(3);
-        quantity_cell.innerHTML = "<input id='quantity" + productName + "' type='number' min='0' value='0'>";
-        add_cart_cell = row.insertCell(4);
-        add_cart_cell.innerHTML = "<button id='add_cart_" + productName + "' onclick='updateCart(\"" + productName + "\")'>Add Item To Cart</button>";
-
-        // create a breakline node and add in HTML DOM
-
-
-    }
     var row = table.insertRow(0);
     var pic = row.insertCell(0);
     var item = row.insertCell(1);
@@ -130,14 +164,17 @@ function populateListProductChoices(slct1, slct2) {
     s2.appendChild(table);
 }
 
-function updateCart(groceryName) {
-    quantity = document.getElementById("quantity" + groceryName);
+function updateCart(groceryName, groceryCategory) {
+    console.log(groceryName)
+    console.log(groceryCategory)
+    quantity = document.getElementById("quantity" + groceryName + groceryCategory);
+    console.log(quantity)
     if (parseInt(quantity.value) > 0) {
         products.forEach(function(product) {
-            if (product.name == groceryName) {
+            if (product.id == groceryName) {
                 var not_found = true;
                 cart_list.forEach(function(item) {
-                    if (groceryName == item.name) {
+                    if (groceryName == item.id) {
                         not_found = false;
                         item.quantity = item.quantity + parseInt(quantity.value);
                         item.price = product.price * item.quantity;
@@ -146,7 +183,7 @@ function updateCart(groceryName) {
                 });
                 if (not_found) {
                     cart_list.push({
-                        name: product.name,
+                        id: product.id,
                         quantity: parseInt(quantity.value),
                         price: product.price * parseFloat(quantity.value),
 
@@ -172,7 +209,7 @@ function refreshCart() {
 
         var row = table.insertRow(0)
 
-        var productName = cart_list[i].name;
+        var productName = cart_list[i].id;
         row.id = productName + "Row"
         pic_cell = row.insertCell(0)
         pic_cell.innerHTML = "<img src='images/" + productName + ".jpg' width=50px>";
@@ -185,8 +222,7 @@ function refreshCart() {
         add_cart_cell = row.insertCell(4);
         add_cart_cell.innerHTML = "<button id='remove_cart_" + productName + "' onclick='removeItem(\"" + productName + "\")'>x</button>";
 
-        // create a breakline node and add in HTML DOM
-
+        // create a breakline node and add in HTML DO
 
     }
     var row = table.insertRow(0);
@@ -210,7 +246,7 @@ function refreshCart() {
 
 function removeItem(prodName) {
     for (let i = 0; i < cart_list.length; i++) {
-        if (cart_list[i].name == prodName) {
+        if (cart_list[i].id == prodName) {
             cart_list.pop(i)
         }
     }
