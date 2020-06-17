@@ -1,0 +1,267 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+
+<head>
+    <title>Module_4_savvy_scissors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="container-md p-3 my-3 border bg-dark text-white">
+        <div class="container-fluid">
+            <h1>Welcome to Savvy Scissors<img src="images/hairdressers_logo.jpg" alt="Savvy Scissors Logo" width="55" style="float: right;"></h1>
+            <p>We'll do your hair for less!</p>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <div class="row" id="navBar">
+        <a href="#services" class="w3-btn w3-black">Services</a>
+        <a href="#hairdressers" class="w3-btn w3-black">Meet our Hairdressers</a>
+        <a href="#find_us" class="w3-btn w3-black">Where to find us</a>
+        <a href="#appointment" class="w3-btn w3-black">Book an Appointment</a>
+    </div>
+
+    <div class="content">
+
+
+
+        <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+        <!-- Card columns allows multiple cards next to each other -->
+        <!-- The first card's button doesn't go anywhere, it could be a modal -->
+        <!-- My second card limits the information seen and uses collapsible to show more -->
+        <div class="container" id=hairdressers>
+            <h2>Meet our hairdressers</h2>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/jolene.jpg" alt="Avatar" style="width:200px;height:200px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Jolene</h1>
+                                <p>Coloring specialist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/antonio.jpg" alt="Antonio" style="width:200px;height:200px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Antonio</h1>
+                                <p>Best short trimmer on the block</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/heather.jpg" alt="Avatar" style="width:200px;height:200px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Heather</h1>
+                                <p>Curly hair guru</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br>
+
+        <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+        <!-- Might be (or not) useful to show some information to the user -->
+        <div class="container" id="services">
+            <h2>Service description</h2>
+            <p>Here is a list of services offered</p>
+            <table class="table table-primary table-hover">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Hair Examples</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Long Haircut</td>
+                        <td>Hair 15"+ in length</td>
+                        <td><img src="images/long_hair.jpg" alt="Long Hair"></td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>Medium Haircut</td>
+                        <td>Hair 6"-14"</td>
+                        <td><img src="images/medium_hair.jpg" alt="Medium Hair"></td>
+                        <td>$35</td>
+                    </tr>
+                    <tr>
+                        <td>Short Haircut</td>
+                        <td>Hair under 6" in length</td>
+                        <td><img src="images/short_hair.jpg" alt="Short Hair"></td>
+                        <td>$20</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wash</td>
+                        <td>Shampoo, Conditioner, Dry</td>
+                        <td><img src="images/shampoo_hair.jpg" alt="Shampoo Hair"></td>
+                        <td>$15</td>
+                    </tr>
+                    <tr>
+                        <td>Coloring</td>
+                        <td>You Choose the color, we do the coloring</td>
+                        <td><img src="images/color_hair.jpg" alt="Colored Hair"></td>
+                        <td>$40</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+        <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+        <!-- Modals are useful for additional information or questions -->
+        <!-- Here the modal is used for a little survey -->
+        <div class="container" id="appointment">
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myAppointment">Book Appointment</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myAppointment" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <h2>Booking Appointment!</h2>
+                                <p>Tell us:</p>
+                                <form>
+                                    <h3>What length haircut would you like?</h3>
+                                    <div class="dropdown">
+                                        <select name="" id="">
+                                            <option value="np_cut" active>No Cut</option>
+                                            <option value="small">Short</option>
+                                            <option value="med">Medium</option>
+                                            <option value="lrg">Large</option>
+                                            
+                                        </select>
+                                    </div>
+
+                                    <div class="other_options">
+                                        <div>
+                                            <label><input type="checkbox" value="wash">Wash</label>
+                                            <label><input type="checkbox" value="color">Color</label>
+                                        </div>
+                                        <div class="contact_info">
+                                            <label for="first_name">First Name:</label>
+                                            <input type="text" name="first_name">
+                                        </div>
+                                        <div>
+                                            <label for="last_name">Last Name:</label>
+                                            <input type="text" name="last_name">
+                                        </div>
+                                        <div>
+                                            <label for="email">Email Address:</label>
+                                            <input type="text" name="email">
+                                        </div>
+                                        <div>
+                                            <label for="phone">Phone Number:</label>
+                                            <input type="text" name="phone">
+                                        </div>
+                                    </div>
+                                    <div class='appointment'>
+                                        <label for="app_time">Appointment Time</label>
+                                        <input type="datetime-local" name="app_time">
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <div class="container" id="find_us">
+            <h2>Where to find us</h2>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Lincoln Fields</h3>
+                    <p>2525 Carling Ave</p>
+                    <p>Ottawa, ON</p>
+                    <p>K2B 7Z2</p>
+                    <p>(613)-1-800-3125</p>
+                    <p>Mon-Fri 9AM-8PM</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Orleans</h3>
+                    <p>110 Place d'Orléans Dr</p>
+                    <p>Orléans, ON </p>
+                    <p>K1C 2L9</p>
+                    <p>(613)-1-800-3126</p>
+                    <p>Mon-Fri 9AM-8PM</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Kanata</h3>
+                    <p>110-130 &, 510 Earl Grey Dr</p>
+                    <p>Ottawa, ON</p>
+                    <p>K2T 1G7</p>
+                    <p>(613)-1-800-3127</p>
+                    <p>Mon-Fri 9AM-8PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/main.js "></script>
+</body>
+
+<footer>Website designed by Simon Walker</footer>
+
+</html>
