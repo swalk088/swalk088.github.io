@@ -1,0 +1,427 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+
+<head>
+    <title>Module_4_savvy_scissors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/jquery-ui.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/c92ecd07ed.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark" id="navBar">
+        <a class="navbar-brand" href="#"><img src="images/hairdresser_logo.png" alt="logo" height="60px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#hairdressers">
+                        <i class="fas fa-user-friends"></i> Meet our Hairdressers</a>
+                </li>
+                <li class="nav-item">
+
+                    <a class="nav-link" href="#services">
+                        <i class="fas fa-cut"></i> Services
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#myAppointment" data-toggle="modal">
+                        <i class="fas fa-calendar-check"></i> Book an Appointment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#find_us">
+                        <i class="fas fa-map-marker-alt"></i> Where to find us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <!-- <div class="row" id="navBar">
+        <a href="#services" class="w3-btn w3-black">Services</a>
+        <a href="#hairdressers" class="w3-btn w3-black">Meet our Hairdressers</a>
+        <a href="#find_us" class="w3-btn w3-black">Where to find us</a>
+        <a href="#appointment" class="w3-btn w3-black">Book an Appointment</a>
+    </div> -->
+
+    <div class="content">
+
+
+
+        <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+        <!-- Card columns allows multiple cards next to each other -->
+        <!-- The first card's button doesn't go anywhere, it could be a modal -->
+        <!-- My second card limits the information seen and uses collapsible to show more -->
+        <div class="container" id=hairdressers>
+            <h2>Meet our hairdressers</h2>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/jolene.jpg" alt="Avatar" style="width:200px;height:200px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Jolene</h1>
+                                <p>Coloring specialist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/antonio.jpg" alt="Antonio" style="width:200px;height:200px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Antonio</h1>
+                                <p>Best short trimmer on the block</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/heather.jpg" alt="Avatar" style="width:200px;height:200px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>Heather</h1>
+                                <p>Curly hair guru</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+        <!-- Modals are useful for additional information or questions -->
+        <!-- Here the modal is used for a little survey -->
+        <div class="container" id="appointment">
+            <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myAppointment">Book Appointment</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myAppointment" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <h2>Personal Information</h2>
+                                <form>
+                                    <Label for="cut_type">How would you like your hair cut?</Label>
+
+                                    <div class="dropdown">
+                                        <select name="cut_type" id="cut_type" required>
+                                            <option value=0 active>No Cut</option>
+                                            <option value=20>Short  $20</option>
+                                            <option value=35>Medium  $35</option>
+                                            <option value=50>Large  $50</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="other_options">
+                                        <div>
+                                            <label><input id="wash"type="checkbox" value="wash">Wash ($15)</label>
+                                            <label><input id="color"type="checkbox" value="color">Color ($40)</label>
+                                        </div>
+                                    </div>
+                                    <Label for="hairdresser">Who would you like to cut your hair?</Label>
+
+                                    <div class="dropdown">
+                                        <select name="employee" id="hairdresser" required>
+                                            <option value="anyone"active>Anyone</option>
+                                            <option value="antonio">Antonio</option>
+                                            <option value="heather">Heather</option>
+                                            <option value="jolene">Jolene</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <div id="warning_div"></div>
+                                    <div class="contact_info">
+                                        <label for="first_name">First Name:</label>
+                                        <input type="text" value="" id="fnText" placeholder="Karen" name="first_name" required>
+                                    </div>
+                                    <div>
+                                        <label for="last_name">Last Name:</label>
+                                        <input type="text" value="" id="lnText" placeholder="Anyone" name="last_name" required>
+                                    </div>
+                                    <div>
+                                        <label for="email">Email Address:</label>
+                                        <input type="text" value="" id="emailText" name="email" inputmode="email" placeholder="anyone@gmail.com" required>
+                                    </div>
+                                    <div>
+                                        <label for="phone">Phone Number:</label>
+                                        <input type="tel" value="" id="phoneText" name="phone" inputmode="tel" placeholder="613-888-8888" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                                    </div>
+
+                                    <div class='appointment'>
+                                        <label for="app_time">Appointment Time</label>
+                                        <input type="datetime-local" value="" id="appTime" name="app_time">
+                                    </div>
+                                    <!-- <input type="submit"> -->
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal">
+                                <i class="far fa-window-close"></i>
+                                Close
+                            </button>
+                            <button id="pay_btn" class="btn btn-primary">
+                                <i class=" fas fa-money-bill-wave "></i>
+                                Pay
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade " id="paymentInfo" role="dialog">
+                <div class="modal-dialog ">
+                    <!-- Modal content-->
+                    <div class="modal-content ">
+                        <div class="modal-header ">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body ">
+                            <div class="container ">
+                                <h2>Payment Information</h2>
+                                <form>
+                                    <div>
+                                        <div class="form-group col-xs-12 ">
+
+                                            <label for="creditCardNum " class="clickable ">
+                                                Credit Card Number
+                                            </label>
+                                            <input name="cardNumber " autocomplete="cc-number " placeholder="Credit Card Number " maxlength="19 " id="creditCardNum " class="form-control form-input-card-number " type="tel ">
+
+
+                                        </div>
+
+
+
+                                        <div class="form-group col-xs-6 ">
+                                            <label for="expDate ">
+                                                Exp. (MM/YY)
+                                            </label>
+                                            <input name="expirationDate " autocomplete="cc-exp " placeholder="08/17 " maxlength="5 " id="expDate " class="form-control " type="tel ">
+
+
+                                        </div>
+
+
+
+                                        <div id="ember4563 " class="col-xs-6 ">
+                                            <label for="securityCode " class="aeo-input-label clickable ">
+                                                            Security Code
+                                                        </label>
+
+                                            <input pattern="[0-9]* " name="securityCode " inputmode="numeric " autocomplete="off " placeholder="Security Code " maxlength="3 " id="secuCode " type="tel ">
+                                            <p>
+                                                The security code is a 3-digit number found on the back of the card near the signature strip.
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </form>
+                                <table id="costTable">
+                                    <tr>
+                                        <td>Total:</td>
+                                        <td id="totalCost"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-target="#myAppointment" data-toggle="modal">
+                                <i class="fas fa-arrow-left "></i>
+                                Back
+                            </button>
+
+                            <button type="button " class="btn btn-primary" data-dismiss="modal">
+                                <i class="fas fa-receipt "></i>
+                                Finish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+        <!-- Might be (or not) useful to show some information to the user -->
+        <div class="container " id="services ">
+            <h2>Service description</h2>
+            <p>Here is a list of services offered</p>
+            <table class="table table-primary ">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th>Hair Examples</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Long Haircut</td>
+                        <td>Hair 15"+ in length</td>
+                        <td><img src="images/long_hair.jpg" alt="Long Hair"></td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>Medium Haircut</td>
+                        <td>Hair 6"-14"</td>
+                        <td><img src="images/medium_hair.jpg" alt="Medium Hair"></td>
+                        <td>$35</td>
+                    </tr>
+                    <tr>
+                        <td>Short Haircut</td>
+                        <td>Hair under 6" in length</td>
+                        <td><img src="images/short_hair.jpg" alt="Short Hair"></td>
+                        <td>$20</td>
+                    </tr>
+
+                    <tr>
+                        <td>Wash</td>
+                        <td>Shampoo, Conditioner, Dry</td>
+                        <td><img src="images/shampoo_hair.jpg" alt="Shampoo Hair"></td>
+                        <td>$15</td>
+                    </tr>
+                    <tr>
+                        <td>Coloring</td>
+                        <td>You choose the color, we do the coloring</td>
+                        <td><img src="images/color_hair.jpg" alt="Colored Hair"></td>
+                        <td>$40</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+        <br><br><br><br>
+        <div class="container" id="find_us">
+            <h2>Where to find us</h2>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Lincoln Fields</h3>
+                    <p>2525 Carling Ave</p>
+                    <p>Ottawa, ON</p>
+                    <p>K2B 7Z2</p>
+                    <p>(613)-1-800-3125</p>
+                    <p>Mon-Fri 9AM-8PM</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Orleans</h3>
+                    <p>110 Place d'Orléans Dr</p>
+                    <p>Orléans, ON </p>
+                    <p>K1C 2L9</p>
+                    <p>(613)-1-800-3126</p>
+                    <p>Mon-Fri 9AM-8PM</p>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Kanata</h3>
+                    <p>110-130 &, 510 Earl Grey Dr</p>
+                    <p>Ottawa, ON</p>
+                    <p>K2T 1G7</p>
+                    <p>(613)-1-800-3127</p>
+                    <p>Mon-Fri 9AM-8PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="failure_modal" class="modal">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box" style="background: #ef513a;">
+                        <i class="material-icons">&#xE5CD;</i>
+                    </div>
+                    <h4 class="modal-title">Whoops!</h4>
+                </div>
+                <div class="modal-body" id="failure-modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger btn-block" data-dismiss="modal" style="background: #ef513a;">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="success_modal" class="modal">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box" style="background: #82ce34;">
+                        <i class="material-icons">&#xE876;</i>
+                    </div>
+                    <h4 class="modal-title">Success!</h4>
+                </div>
+                <div class="modal-body" id="success-modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success btn-block" data-dismiss="modal" style="background: #82ce34;">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js "></script>
+
+
+</body>
+
+<footer>Website designed by Simon Walker</footer>
+
+</html>
