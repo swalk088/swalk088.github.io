@@ -1,0 +1,298 @@
+    /* @extend display-flex; */
+    
+    display-flex {
+        display: flex;
+        display: -webkit-flex;
+    }
+    /* @extend list-type-ulli; */
+    /* 
+
+    /* roboto-slab-300 - latin */
+    
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 300;
+        src: url("/assets/fonts/roboto-slab/roboto-slab-v7-latin-300.eot");
+        /* IE9 Compat Modes */
+        src: local("Roboto Slab Light"), local("RobotoSlab-Light"), url("/assets/fonts/roboto-slab/roboto-slab-v7-latin-300.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/roboto-slab/roboto-slab-v7-latin-300.woff2") format("woff2"), url("/fonts/roboto-slab/roboto-slab-v7-latin-300.woff") format("woff"), url("/fonts/roboto-slab/roboto-slab-v7-latin-300.ttf") format("truetype"), url("/fonts/roboto-slab/roboto-slab-v7-latin-300.svg#RobotoSlab") format("svg");
+        /* Legacy iOS */
+    }
+    /* roboto-slab-regular - latin */
+    
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 400;
+        src: url("/assets/fonts/roboto-slab/roboto-slab-v7-latin-regular.eot");
+        /* IE9 Compat Modes */
+        src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url("/assets/fonts/roboto-slab/roboto-slab-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/roboto-slab/roboto-slab-v7-latin-regular.woff2") format("woff2"), url("/fonts/roboto-slab/roboto-slab-v7-latin-regular.woff") format("woff"), url("/fonts/roboto-slab/roboto-slab-v7-latin-regular.ttf") format("truetype"), url("/fonts/roboto-slab/roboto-slab-v7-latin-regular.svg#RobotoSlab") format("svg");
+        /* Legacy iOS */
+    }
+    /* roboto-slab-700 - latin */
+    
+    @font-face {
+        font-family: 'Roboto Slab';
+        font-style: normal;
+        font-weight: 700;
+        src: url("/assets/fonts/roboto-slab/roboto-slab-v7-latin-700.eot");
+        /* IE9 Compat Modes */
+        src: local("Roboto Slab Bold"), local("RobotoSlab-Bold"), url("/assets/fonts/roboto-slab/roboto-slab-v7-latin-700.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/roboto-slab/roboto-slab-v7-latin-700.woff2") format("woff2"), url("/fonts/roboto-slab/roboto-slab-v7-latin-700.woff") format("woff"), url("/fonts/roboto-slab/roboto-slab-v7-latin-700.ttf") format("truetype"), url("/fonts/roboto-slab/roboto-slab-v7-latin-700.svg#RobotoSlab") format("svg");
+        /* Legacy iOS */
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    figure {
+        margin: 0 auto;
+    }
+    
+    p {
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        color: #222;
+        font-family: 'Roboto Slab';
+        font-size: 14px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    
+    input:-webkit-autofill {
+        box-shadow: 0 0 0 30px white inset;
+        -moz-box-shadow: 0 0 0 30px white inset;
+        -webkit-box-shadow: 0 0 0 30px white inset;
+        -o-box-shadow: 0 0 0 30px white inset;
+        -ms-box-shadow: 0 0 0 30px white inset;
+    }
+    
+    h1 {
+        display: flex;
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        color: #222;
+        font-family: 'Roboto Slab';
+        font-size: 32px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    h2 {
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        color: #222;
+        font-family: 'Roboto Slab';
+        font-size: 20px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    
+    h3 {
+        font-weight: bold;
+        color: #222;
+        font-size: 15px;
+        margin: 0px;
+        margin-bottom: 35px;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    
+    h1.likert-header {
+        padding-left: 4.25%;
+        margin: 20px 0 0;
+    }
+    
+    form .statement {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 30px 0 0 4.25%;
+        margin-bottom: 10px;
+    }
+    
+    form .likert {
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 35px;
+        display: block;
+        border-bottom: 2px solid #efefef;
+    }
+    
+    form .likert:last-of-type {
+        border-bottom: 0;
+    }
+    
+    form .likert:before {
+        content: '';
+        position: relative;
+        top: 11px;
+        left: 9.5%;
+        display: block;
+        background-color: #efefef;
+        height: 4px;
+        width: 78%;
+    }
+    
+    form .likert li {
+        display: inline-block;
+        width: 19%;
+        text-align: center;
+        vertical-align: top;
+    }
+    
+    form .likert li input[type=radio] {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 50%;
+        margin-left: -6px;
+    }
+    
+    form .likert li label {
+        width: 100%;
+    }
+    
+    form .buttons {
+        margin: 30px 0;
+        padding: 0 4.25%;
+        text-align: right
+    }
+    
+    .questions {
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        color: #222;
+        font-family: 'Roboto Slab';
+        font-size: 10px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+    }
+    
+    head {
+        display: flex;
+        font-size: 20px;
+        line-height: 1.8;
+        color: #fff;
+        font-family: 'Roboto Slab';
+        justify-content: center;
+        align-items: center;
+    }
+    
+    body {
+        font-size: 13px;
+        line-height: 1.8;
+        color: #fff;
+        background-color: #3a518d;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-position: center center;
+        font-family: 'Roboto Slab';
+        margin: 0 auto;
+    }
+    
+    footer {
+        display: flex;
+        font-size: 13px;
+        line-height: 1.8;
+        color: #fff;
+        font-family: 'Roboto Slab';
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main {
+        padding: 60px 0;
+        position: relative;
+    }
+    
+    .container {
+        width: 1000px;
+        background: #fff;
+        margin: 0 auto;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -o-border-radius: 10px;
+        -ms-border-radius: 10px;
+    }
+    
+    .questionnaire-form {
+        padding: 50px 60px 70px 60px;
+    }
+    
+    .submit {
+        width: auto;
+        background: #4966b1;
+        color: #fff;
+        padding: 16px 17px;
+        font-size: 13px;
+        border: none;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -o-border-radius: 5px;
+        -ms-border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 1px 15px 0px rgba(73, 102, 177, 0.7);
+        -moz-box-shadow: 0px 1px 15px 0px rgba(73, 102, 177, 0.7);
+        -webkit-box-shadow: 0px 1px 15px 0px rgba(73, 102, 177, 0.7);
+        -o-box-shadow: 0px 1px 15px 0px rgba(73, 102, 177, 0.7);
+        -ms-box-shadow: 0px 1px 15px 0px rgba(73, 102, 177, 0.7);
+    }
+    
+    #confirm_type {
+        margin-bottom: 30px;
+    }
+    
+    .form-group-1 {
+        color: black;
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .form-group-2 {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .form-check {
+        margin-bottom: 20px;
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .container {
+            margin: 0 auto;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .container {
+            width: calc( 100% - 30px);
+            max-width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        .questionnaire-form {
+            padding: 50px 30px 70px 30px;
+        }
+    }

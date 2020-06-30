@@ -1,0 +1,77 @@
+<html lang="en-US">
+
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+
+    <h2>Submissions</h2>
+    <ul>
+        <h2>Names</h2>
+        <% for (var i=0; i<results.length; i++){ %>
+            <li>
+                First name:
+                <%= results[i].q1firstname %>
+                    Last name:
+                    <%= results[i].q1lastname %>
+
+            </li>
+            <% } %>
+    </ul>
+    <ul>
+        <h2>Comments on the </h2>
+        <% for (var i=0; i<results.length; i++){ %>
+            <li>
+                <%= results[i].q2 %>
+            </li>
+            <% } %>
+    </ul>
+    <ul>
+        <h2>Proper Header Choice</h2>
+        <% for (var i=0; i<results.length; i++){ %>
+            <li>
+                Header:
+                <%= results[i].q3 %>
+
+            </li>
+            <% } %>
+    </ul>
+    <ul>
+        <h2>Comfortable Creating account</h2>
+        <% for (var i=0; i<results.length; i++){ %>
+            <li>
+                <%= results[i].q4%>
+
+            </li>
+            <% } %>
+    </ul>
+    <ul>
+        <h2>Visually appealing?</h2>
+        <% for (var i=0; i<results.length; i++){ %>
+            <li>
+                <%= results[i].q5 %>
+
+            </li>
+            <% } %>
+    </ul>
+    <ul>
+        <h2>Appearance</h2>
+        <% for (var i=0; i<results.length; i++){ %>
+            <li>
+                <%= results[i].q6 %>
+            </li>
+            <% } %>
+    </ul>
+    <ul>
+        <h2>Comments</h2>
+        <% for (var i=0; i<results.length; i++){ %>
+            <li>
+                <%= results[i].comments %>
+            </li>
+            <% } %>
+    </ul>
+</body>
+
+</html>

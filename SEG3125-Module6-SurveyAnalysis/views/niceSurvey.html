@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>QUESTIONNAIRE_SEG3125_LAB_1</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'> -->
+</head>
+
+<body>
+    <div class="container">
+        <form class="questionnaire-form">
+            <h1>Questionnaire</h1>
+            <p>This is a questionnaire about the UI of the site of Ultimate Canada:
+                <a href="https://canadianultimate.com/">https://canadianultimate.com/</a>
+            </p>
+            <div class="form-group-1">
+                <p>1. Can you input your first and last names in the boxes below</p>
+                <div>
+                    <label for="">First Name:</label>
+                    <input type="text" name=q1firstname required>
+                </div>
+                <div>
+                    <label for="">Last Name:</label>
+                    <input type="text" name=q1lastname required>
+                </div>
+            </div>
+            <div class="form-group-1">
+                <p>2. What are your initial impressions of this website based on its cover page below. </p>
+                <a href="https://canadianultimate.com/">
+                    <img src="assets/images/ultimate_canada.PNG" alt="Ultimate Canada Website">
+                </a>
+                <br>
+                <label class="questions" for="initial_impressions">(Please answer here.)</label>
+                <br>
+                <textarea rows="4" cols="50" id="initial_impressions" name="q2" required></textarea>
+
+            </div>
+            <div class="form-group-1">
+                <p>3. From the main page, which button would you click on to find infomation on the National Frisbee teams?</p>
+                <div>
+                    <input id="ultimate_canada" type="radio" name="q3" value="ultimate_canada" required>
+                    <label class="label-agree-term" for="ultimate_canada">Ultimate Canada</label>
+                </div>
+                <div>
+                    <input id="events" type="radio" name="q3" value="events" required>
+                    <label class="label-agree-term" for="events">Events</label>
+                </div>
+                <div>
+                    <input id="high_performance" type="radio" name="q3" value="high_performance" required>
+                    <label class="label-agree-term" for="high_performance">High Performance</label>
+                </div>
+                <div>
+                    <input id="programs" type="radio" name="q3" value="programs" required>
+                    <label class="label-agree-term" for="programs">Programs</label>
+                </div>
+                <div>
+                    <input id="pay_fees" type="radio" name="q3" value="pay_fees" required>
+                    <label class="label-agree-term" for="pay_fees">Pay Fees</label>
+                </div>
+            </div>
+            <div class="form-group-1">
+                <p>4. Would you be comfortable saying that you would be able to create an account for this website?</p>
+                <select name=q4 required> 
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
+                </select>
+            </div>
+
+            <div class="form-group-1">
+                <p>5. This website looks visually appealing</p>
+                <div class="wrap">
+                    <ul class='likert'>
+                        <li>
+                            <input type="radio" name="q5" value="strong_agree" required>
+                            <label>Strongly agree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q5" value="strong_agree" required>
+                            <label>Agree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q5" value="strong_agree" required>
+                            <label>Neutral</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q5" value="disagree" required>
+                            <label>Disagree</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="q5" value="strong_agree" required>
+                            <label>Strongly disagree</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-group-1">
+                    <p>6. Using the attributes listed below, describe the appearance of this Website</p>
+                    <div>
+                        <input id="weird" type="checkbox" value="weird" name="q6">
+                        <label class="label-agree-term" for="weird">Weird</label>
+                    </div>
+                    <div>
+                        <input id="stylish" type="checkbox" value="stylish" name="q6">
+                        <label class="label-agree-term" for="stylish">Stylish</label>
+                    </div>
+                    <div>
+                        <input id="use" type="checkbox" value="usable" name="q6">
+                        <label class="label-agree-term" for="use">Usable</label>
+                    </div>
+                    <div>
+                        <input id="layout" type="checkbox" value="well_thought_out" name="q6">
+                        <label class="label-agree-term" for="layout">Well thought out</label>
+                    </div>
+                    <div>
+
+                        <input id="creative" type="checkbox" value="creative" name="q6">
+                        <label class="label-agree-term" for="creative">Creative</label>
+                    </div>
+                    <div>
+
+                        <input id="modern" type="checkbox" value="modern" name="q6">
+                        <label class="label-agree-term" for="modern">Modern</label>
+                    </div>
+                </div>
+                <div class="form-group-1">
+                    <p>Any Comments or questions can be mentioned below:</p>
+                    <textarea rows="4" cols="50" id="comments" name="comments"></textarea>
+                </div>
+
+                <div class="form-group-2">
+                    <input class="submit" type="submit" id="bb">
+                </div>
+        </form>
+        <script src="/assets/action.js"></script>
+
+        </div>
+</body>
+<footer>WEBSITE DESIGNED BY SIMON WALKER FOR SEG3125</footer>
+
+</html>
